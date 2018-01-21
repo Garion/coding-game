@@ -40,12 +40,12 @@ class Old
         {
             io.Read();
 
-            float power = 100.0f;
+            double power = 100.0f;
 
             // powerfactor 1
-            float fullSpeedAngle = 70.0f;
-            float noSpeedAngle = 90.0f;
-            float powerFactor = (float)((io.absAngle - noSpeedAngle)) / (float)((fullSpeedAngle - noSpeedAngle));
+            double fullSpeedAngle = 70.0f;
+            double noSpeedAngle = 90.0f;
+            double powerFactor = (double)((io.absAngle - noSpeedAngle)) / (double)((fullSpeedAngle - noSpeedAngle));
             powerFactor = Util.Clamp(powerFactor, 0.0f, 1.0f);
 
             power *= powerFactor;
